@@ -317,10 +317,13 @@ UI.tap[0].sprite.src="img/tap/t0.png";
 UI.tap[1].sprite.src="img/tap/t1.png";
 /*primary images for bird*/
 var nftvalue = document.cookie;
-bird.animations[0].sprite.src="https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/arweave.net/" + nftvalue +"/image.png";
-bird.animations[1].sprite.src="https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/arweave.net/" + nftvalue +"/image.png";
-bird.animations[2].sprite.src="https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/arweave.net/" + nftvalue +"/image.png";
-bird.animations[3].sprite.src="https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/arweave.net/" + nftvalue +"/image.png";
+var nftsplit = nftvalue.split("=");
+var nftlink = nftsplit[1];  
+//alert(nftlink);
+bird.animations[0].sprite.src= nftlink;
+bird.animations[1].sprite.src= nftlink;
+bird.animations[2].sprite.src= nftlink;
+bird.animations[3].sprite.src= nftlink;
 SFX.start.src = "sfx/start.wav"
 SFX.flap.src = "sfx/flap.wav"
 SFX.score.src = "sfx/score.wav"
