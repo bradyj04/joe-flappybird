@@ -1,6 +1,5 @@
 h1 {
     display: block;
-    color: #000000;
     font-family: "Squada One";
     font-size: 64px;
     font-weight: bold;
@@ -9,7 +8,6 @@ h1 {
 }
 #nft-input {
     display: block;
-    color: #000000;
     text-align: center;
     font-family: "Arial";
     font-size: 32px;
@@ -24,4 +22,11 @@ h1 {
     justify-content: space-between;
     padding: 5px;
     margin: 0 10px 0 10px;
+}
+body {
+    background-color: #fd0012;
+    color: #ffffff;
+}
+html {
+    border: 20px solid #ffffff;
 }

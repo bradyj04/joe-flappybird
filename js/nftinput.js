@@ -6,7 +6,7 @@ function saveInputNFT() {
     playbutton.innerHTML = "Play Now";
     playbutton.className = "play-button";
     playbutton.id = "play-button";
-    playbutton.href = "/game/index.html";
+    playbutton.href = "./game/index.html";
     document.body.appendChild(playbutton);
     /*save nftvalue to cookie*/
     document.cookie = "nft=" + nftvalue;

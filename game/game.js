@@ -137,7 +137,7 @@
     frame:0,
     draw : function() {
         let h = this.animations[this.frame].sprite.height;
-        let w = this.animations[this.frame].sprite.width;
+        let w = this.animations[this.frame].sprite.width/6;
         sctx.save();
         sctx.translate(this.x,this.y);
         sctx.rotate(this.rotatation*RAD);
@@ -206,7 +206,7 @@
         let bird = this.animations[0].sprite;
         let x = pipe.pipes[0].x;
         let y = pipe.pipes[0].y;
-        let r = bird.height/4 +bird.width/4;
+        let r = bird.height/7 +bird.width/4;
         let roof = y + parseFloat(pipe.top.sprite.height);
         let floor = roof + pipe.gap;
         let w = parseFloat(pipe.top.sprite.width);
