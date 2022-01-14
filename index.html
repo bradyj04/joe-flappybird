@@ -9,13 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/nftinput.js"></script>
 </head>
+<header>
+    <div id="header-div"></div>
+    <h1 id="play-header">Choose your Bird</h1>
+</header>
 <body>
-    <h1 id="play-header">Play Flappy Birdz</h1>
-    <!--Input for url for NFT image-->
-    <form id="nft-input">
-        Enter the section of the NFT image URL:
-        <input type="text" id="nft_url" placeholder="NFT Image URL">
-        <input onclick="saveInputNFT(); this.onclick=null;" type="button" value="Submit">
-        <!--TEST URL FOR INPUT: https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/www.arweave.net/BA4rAIN16HVT99YcxS3G27CDL66DqwlM6y3HZbMJ1iI/image.png-->
-    </form>
+    <img src="./tunnels.svg" alt="tunnels" width="100%" id="overlay-img">
+    <div>
+        <!--Input for url for NFT image-->
+        <form id="nft-input">
+            <input type="text" id="nft_url" placeholder="NFT Image URL">
+            <input onclick="saveInputNFT()" type="button" value="Submit" id="input-button">
+            <!--TEST URL FOR INPUT: https://hkgwtdvfyh.medianetwork.cloud/unsafe/30x30/filters:format(webp)/www.arweave.net/BA4rAIN16HVT99YcxS3G27CDL66DqwlM6y3HZbMJ1iI/image.png-->
+        </form>
+    </div>
 </body>

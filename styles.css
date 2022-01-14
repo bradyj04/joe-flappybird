@@ -1,32 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #7464d3;
+    color: #ffffff;
+    text-align: center;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
 h1 {
     display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
     font-family: "Squada One";
-    font-size: 64px;
+    font-size: 72px;
     font-weight: bold;
     text-align: center;
-    margin: 40px 0 40px 0; 
+    transform: skewX(0deg);
+}
+#header-div {
+    display: block;
+    position: absolute;
+    background-color: #1d1d1d;
+    padding: 50px 0 50px 0;
+    border: #fffff2 solid 3px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+    width: 70%;
+    transform: skewX(-10deg);
+}
+#field_alert {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: fit-content;
+    color: #ff0011;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px 16px 7px 36px;
+    outline: solid #222222 2px;
+    background-color: white;
+    background-image: url(./errorsign.svg);
+    background-repeat: no-repeat;
+    background-position: 6px;
+    border-radius: 6px;
+}
+.error-shake {
+    animation-name: error-shake;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes error-shake {
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 #nft-input {
     display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
     text-align: center;
     font-family: "Arial";
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    margin: 40px 0 40px 0; 
+    margin: 13% 0 40px 0; 
     justify-content: space-between;
 }
 #nft_url {
     display: inline;
-    flex-wrap: wrap;
+    z-index: 1;
     justify-content: space-between;
-    padding: 5px;
+    color: #3d3d3d;
+    font-family: Calibri;
+    font-size: 16px;
+    font-weight: bold;
+    background-image: url(./image-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 7px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    outline: solid 2px #222222;
+    border: none;
+    width: 30%;
+    padding: 15px;
+    padding-left: 37px;
     margin: 0 10px 0 10px;
+    transition: outline-width .1s ease-in-out, transform .1s ease-in-out;
 }
-body {
-    background-color: #fd0012;
-    color: #ffffff;
+#nft_url:hover, #nft_url:focus {
+    outline: solid #222222;
+    outline-width: 3.5px;   
+    transform: scale(1.01); 
 }
-html {
-    border: 20px solid #ffffff;
+#input-button{
+    z-index: 1;
+    display: inline;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 16px 30px 16px 30px;
+    outline: solid 2px #222222;
+    border: none;
+    border-radius: 5px;
+    transition: outline-width .1s ease-in-out, transform .1s ease-in-out;
+}
+#input-button:hover {
+    outline-width: 3.5px;
+    transform: scale(1.03);
+}
+#play-button{
+    z-index: 1;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #222222;
+    cursor: pointer;
+    background-color: #ffffff;
+    outline: solid 3px #222222;
+    border-radius: 5px;
+    width: 20%;
+    margin: 18% auto 0 auto;
+    padding: 20px 0 20px 0;
+    transition: border-radius .2s ease-in-out, transform .2s ease-in-out, outline-width .2s ease-in-out;
+}
+#play-button:hover {
+    border-radius: 25px;
+    transform: scale(1.05);
+    outline-width: 4.5px;
+}
+#overlay-img {
+    display: block;
+    position: absolute;
+    overflow:hidden;
+    bottom: 0;
+    z-index: -1;
 }
